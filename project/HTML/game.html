@@ -5,8 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/game.css">
+    <script src="../JS/game.js"></script>
 </head>
 <body>
+    <div id="StartScreen">
+        <h1>Willkommen zum Fußballspiel</h1>
+        <input type="text" placeholder="Dein Name" id="playerName">
+        <br><br>
+        <button id="Info" onclick="showInfo()">Info</button>
+        <div id="infoText"  style="display:none;">
+        <p>...</p>
+        <button onclick="closeInfo()">Schließen</button>
+    </div>
+        <br>
+        <button id="glovSe" onclick="toggleGloveSelection()">Handschuhe wählen</button>
+        <div class="glove-selection" id="gloveContainer" style="display: none;">
+            <h3>Wähle deine Handschuhe:</h3>
+            <img src="../BILDER/Handschuh1.png" onclick="selectGlove(this)">
+            <img src="../BILDER/Handschuh2.png" onclick="selectGlove(this)">
+            <img src="../BILDER/Handschuh3.png" onclick="selectGlove(this)">
+        </div>
+        <br>
+        <button id="Startbutton" onclick="startGame()">Start</button>
+    </div>
+    
     
 </body>
 </html>
