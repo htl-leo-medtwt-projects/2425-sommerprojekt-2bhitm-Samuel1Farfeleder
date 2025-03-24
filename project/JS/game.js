@@ -39,3 +39,35 @@ function showInfo() {
 
         
       }
+      function toggleGloveSelection(){
+        document.getElementById("playerName").style.display = "none";
+        document.getElementById("Info").style.display = "none";
+        document.getElementById("Startbutton").style.display = "none";
+        document.getElementById("glovSe").style.display = "none";
+        document.getElementById("gloveContainer").style.display = "block";
+        document.getElementById("selectedGloveContainer").style.display = "none";
+
+
+
+      }
+      function closeSel(){
+        document.getElementById("playerName").style.display = "block";
+        document.getElementById("Info").style.display = "block";
+        document.getElementById("Startbutton").style.display = "block";
+        document.getElementById("glovSe").style.display = "block";
+        document.getElementById("gloveContainer").style.display = "none";
+        document.getElementById("selectedGloveContainer").style.display = "block";
+
+
+
+      }
+
+      function selectGlove(element) {
+        document.querySelectorAll('.glove-selection img').forEach(img => img.classList.remove('selected'));
+        element.classList.add('selected');
+
+        document.getElementById('selectedGloveContainer').style = "block";
+
+        document.getElementById('selectedGlove').src = element.src;
+    }
+    

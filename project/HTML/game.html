@@ -15,7 +15,7 @@
         <button id="Info" onclick="showInfo()">Info</button>
         <div id="infoText"  style="display:none;">
         <p>...</p>
-        <button onclick="closeInfo()">Schließen</button>
+        <button  onclick="closeInfo()">Schließen</button>
     </div>
         <br>
         <button id="glovSe" onclick="toggleGloveSelection()">Handschuhe wählen</button>
@@ -24,9 +24,16 @@
             <img src="../BILDER/Handschuh1.png" onclick="selectGlove(this)">
             <img src="../BILDER/Handschuh2.png" onclick="selectGlove(this)">
             <img src="../BILDER/Handschuh3.png" onclick="selectGlove(this)">
+            <button id="closeSel" onclick="closeSel()">Schließen</button>
         </div>
         <br>
         <button id="Startbutton" onclick="startGame()">Start</button>
+
+        <div id="selectedGloveContainer" style="display: none">
+            <h3>Deine Handschuhe:</h3>
+            <img id="selectedGlove"   src="../BILDER/Handschuh1.png" alt="Handschuh">
+        </div>
+        
     </div>
     
     

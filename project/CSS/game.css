@@ -1,3 +1,7 @@
+*{
+    font-family: Mont;
+   
+}
 body{
    text-align: center;
     background-image: url('../BILDER/Fußballfeld.png'); 
@@ -5,6 +9,12 @@ body{
 background-size: cover;
 background-repeat: no-repeat;    
 background-position-y:22% ;
+
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url('../FONT/MontserratAlternates-Bold.ttf');
 }
 
 #StartScreen {
@@ -77,3 +87,57 @@ button:hover {
     text-align: center;
     z-index: 1000;
   }
+  h1{
+    position: absolute;
+    top: 10%;
+    left: auto;
+    right: auto;
+  }
+  input{
+    position: absolute;
+    top: 30%;
+    left: auto;
+    right: auto;
+  }
+
+  #Info{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 20%;
+  }
+
+  #Startbutton{
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: auto;
+    width: 20%;
+  }
+
+  #glovSe{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 20%;
+  } 
+  #closeSel{
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    
+  }
+  #selectedGloveContainer {
+    margin-top: 20px;
+    text-align: center;
+    position: absolute;
+    top: 65%;
+}
+
+#selectedGlove {
+    width: 100px;
+    height: auto;
+    border: 3px solid yellow;
+    border-radius: 10px;
+    box-shadow: 0 0 10px yellow;
+}
