@@ -70,4 +70,21 @@ function showInfo() {
 
         document.getElementById('selectedGlove').src = element.src;
     }
-    
+    document.addEventListener("DOMContentLoaded", function() {
+      
+
+      const image = document.getElementById("imageHS");
+      const container = document.getElementById("container");
+      let positionX = image.offsetLeft;
+      const maxRight = container.clientWidth - image.clientWidth;
+      const minLeft = 90;
+      
+      document.addEventListener("keydown", function(event) {
+          if (event.key === "ArrowRight" && positionX < maxRight) {
+              positionX += 10;
+          } else if (event.key === "ArrowLeft" && positionX > minLeft) {
+              positionX -= 10;
+          }
+          image.style.left = positionX + "px";
+      });
+  });
