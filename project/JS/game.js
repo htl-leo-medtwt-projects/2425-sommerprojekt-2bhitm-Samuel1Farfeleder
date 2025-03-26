@@ -94,7 +94,7 @@ function showInfo() {
       });
   });
 
-let gameTime = 3;
+let gameTime = 30;
 let timerInterval;
 
 function updateTimerDisplay() {
