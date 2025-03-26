@@ -8,13 +8,18 @@
     <script src="../JS/game.js"></script>
 </head>
 <body>
-    <div id="StartScreen">
+<div id="StartScreen">
+        <a href="../index.html">
+        <img id="pfeil" src="../BILDER/PfeilL.png" alt=""></a>
         <h1>Willkommen zum Fußballspiel</h1>
         <input type="text" placeholder="Dein Name" id="playerName">
         <br><br>
         <button id="Info" onclick="showInfo()">Info</button>
         <div id="infoText"  style="display:none;">
-        <p>...</p>
+            <h2>Spielanleitung</h2>
+            <p>Sammle so viele Fußbälle wie möglich!</p>
+            <p>Jeder gesammelte Fußball gibt dir +5 Sekunden extra Zeit.</p>
+            <p>Für das beste Spielerlebnis spiele im Vollbildmodus (F11 oder Fn + F11).</p>
         <button  onclick="closeInfo()">Schließen</button>
     </div>
         <br>
@@ -39,7 +44,35 @@
      <div id="container">
                 <img id="imageHS" src="../BILDER/Handschuh1.png" alt="Bewegliches Bild">
         </div>
+
+
+       
         
-    
+        <div id="ResetScreen" style="display: none;">
+            <img id="banner" src="../BILDER/Banner.png" alt="GAME_OVER">
+            <div id="ResetContainer">
+                <div class="container2">
+              <div class="counter2">
+                        <img src="../BILDER/balls.webp" alt="Balls">
+                        <span id="counter">0000</span>
+                </div>
+
+         <div id="resetButton" onclick="resetButton()">Restart</div>
+	  </div>
+    </div>
+</div>
+
+        <div class="container">
+        <div class="status-bar">
+        <div class="timer">
+                <img src="../BILDER/Sotpuhr.webp" alt="Stoppuhr">
+                <span id="timer">30</span>
+        </div>
+        <div class="counter">
+                <img src="../BILDER/balls.webp" alt="Balls">
+                <span id="counter">0000</span>
+    </div>
+    </div>
+    </div>
 </body>
 </html>

@@ -157,3 +157,119 @@ bottom: 20%;
   transform: translate(-50%, -50%);
   width: 100px;
 }
+#ResetScreen{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+#ResetContainer{
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+    width: 40%;
+    text-align: center;
+}
+#banner{
+  width: 50%;
+}
+#resetButton{
+  margin-left: 40%;
+  color: black;
+width: 100px;
+  background: yellow;
+  border: none;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px yellow;
+}
+#resetButton:hover {
+  box-shadow: 0 0 20px yellow;
+  transform: scale(1.1);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container2 {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.counter2 {
+display: block;
+margin-left: 40%;
+margin-bottom: 10%;
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 120px;
+}
+
+ .counter2 img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.status-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.timer, .counter {
+  
+  display: flex;
+  align-items: center;
+  background: #dcdcdc;
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 120px;
+}
+
+.timer img, .counter img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#time, #counter {
+  font-size: 20px;
+  font-weight: bold;
+  width: 50px;
+  text-align: center;
+}
+#pfeil{
+  position: absolute;
+  top: 0;
+  left: 2%;
+  width: 1%;
+  background: yellow;
+  border: none;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px yellow;
+}

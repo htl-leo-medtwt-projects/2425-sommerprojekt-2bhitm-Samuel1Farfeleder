@@ -8,14 +8,17 @@ function selectGlove(element) {
     element.classList.add('selected');
 }
 function startGame() {
-    document.getElementById("StartScreen").style.display = "none";
-
-    const name = document.getElementById('playerName').value;
-    if (!name) {
-        alert('Bitte gib deinen Namen ein!');
-        return;
+let name = document.getElementById('playerName');
+    
+     if (!name.value.trim()) {
+      console.log("Enter a name")
+      setTimeout(() => {
+console.log("ok")
+      }, 3000);
+      return;
     }
-    alert(`Spiel beginnt, ${name}!`);
+    document.getElementById("StartScreen").style.display = "none";
+    startTimer();
 }
 function showInfo() {
     document.getElementById("infoText").style.display = "block";
@@ -69,6 +72,8 @@ function showInfo() {
         document.getElementById('selectedGloveContainer').style = "block";
 
         document.getElementById('selectedGlove').src = element.src;
+        document.getElementById('imageHS').src = element.src;
+
     }
     document.addEventListener("DOMContentLoaded", function() {
       
@@ -88,3 +93,35 @@ function showInfo() {
           image.style.left = positionX + "px";
       });
   });
+
+let gameTime = 3;
+let timerInterval;
+
+function updateTimerDisplay() {
+  document.getElementById("timer").innerText = `Time: ${gameTime}`;
+}
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    gameTime--;
+    updateTimerDisplay();
+
+    if (gameTime === 0) {
+      document.getElementById("ResetScreen").style.display = "block";
+      document.getElementById("resetButton").style.display = "block";
+
+      endGame();
+    }
+  }, 1000);
+}
+
+function endGame() {
+  clearInterval(timerInterval);
+  
+
+}
+endGame();
+function resetButton() {
+  location.reload();
+}
+
