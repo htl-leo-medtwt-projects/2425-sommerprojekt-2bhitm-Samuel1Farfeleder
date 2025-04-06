@@ -151,12 +151,14 @@ bottom: 20%;
   overflow: hidden;
 }
 #imageHS {
+  background-color: red;
   position: absolute;
-  top: 50%;
+  bottom: 20%; 
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 100px;
 }
+
 #ResetScreen{
   display: block;
   position: fixed;
@@ -324,4 +326,26 @@ margin-bottom: 10%;
 }
 .setting-btn:hover .bar2::before {
   transform: translateX(-6px);
+}
+#torbox{
+  position: absolute;
+  background-color: red;
+  width: 20%;
+  padding: 5%;
+  bottom: 2%;
+  right: 35%;
+  opacity: 0;
+  
+}
+.flying-ball {
+    z-index: 5;
+    pointer-events: none;
+}
+#container {
+  position: fixed; /* statt absolute */
+  width: 100vw;
+  height: 100vh; /* volle Höhe */
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
 }

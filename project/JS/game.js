@@ -124,4 +124,87 @@ endGame();
 function resetButton() {
   location.reload();
 }
+let score = 0;
 
+function spawnBall() {
+  const ball = document.createElement("img");
+  ball.src = "../BILDER/ball.webp";
+  ball.classList.add("flying-ball");
+  ball.style.position = "absolute";
+  ball.style.top = "-100px";
+  ball.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
+  ball.style.width = "50px";
+  document.getElementById("container").appendChild(ball);
+
+  let posY = 0;
+  const speed = 3;
+  const interval = setInterval(() => {
+    posY += speed;
+    ball.style.top = `${posY}px`;
+
+    const ballRect = ball.getBoundingClientRect();
+    const torbox = document.getElementById("torbox").getBoundingClientRect();
+    const handschuh = document.getElementById("imageHS").getBoundingClientRect();
+
+    if (
+      ballRect.bottom >= torbox.top &&
+      ballRect.left < torbox.right &&
+      ballRect.right > torbox.left
+    ) {
+      gameTime = Math.max(0, gameTime - 3);
+      updateTimerDisplay();
+      ball.remove();
+      clearInterval(interval);
+    }
+
+    else if (
+      ballRect.bottom >= handschuh.top &&
+      ballRect.top <= handschuh.bottom &&
+      ballRect.left < handschuh.right &&
+      ballRect.right > handschuh.left
+    ) {
+      gameTime += 5;
+      updateTimerDisplay();
+      score++;
+      updateCounterDisplay();
+      ball.remove();
+      clearInterval(interval);
+    }
+    
+    if (gameTime === 0) {
+      document.getElementById("ResetScreen").style.display = "block";
+      document.getElementById("resetButton").style.display = "block";
+
+      endGame();
+    }
+
+    else if (posY > window.innerHeight) {
+      ball.remove();
+      clearInterval(interval);
+    }
+  }, 16);
+}
+
+function updateCounterDisplay() {
+  document.getElementById("counter").innerText = score.toString().padStart(4, "0");
+  document.getElementById("counter2").innerText = `Count: ${score}`;
+}
+
+
+
+function startGame() {
+  let name = document.getElementById("playerName");
+
+  if (!name.value.trim()) {
+    console.log("Enter a name");
+    setTimeout(() => {
+      console.log("ok");
+    }, 3000);
+    return;
+  }
+
+  document.getElementById("StartScreen").style.display = "none";
+  startTimer();
+
+  setInterval(spawnBall, 2000); 
+}
