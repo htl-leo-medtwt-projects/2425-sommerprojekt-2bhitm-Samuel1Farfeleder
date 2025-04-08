@@ -5,16 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/game.css">
-    <script src="../JS/game.js"></script>
+    <script src="../JS/game.js" defer></script>
     
 </head>
 <body>
 <div id="StartScreen">
-    <button class="setting-btn">
+    <!-- From Uiverse.io by ElsayedShamsEldeen --> 
+<div id="mute" onclick="audioMute()"><input id="checkboxInput" type="checkbox" />
+<label class="toggleSwitch" for="checkboxInput">
+  <div class="speaker">
+    <svg stroke-width="5" stroke="#000000" viewBox="0 0 75 75" version="1.0">
+        <path
+          stroke-linejoin="round"
+          fill="#000000"
+          d="m39,14-17,15H6V48H22l17,15z"
+        ></path>
+        <path
+          stroke-linecap="round"
+          fill="#000000"
+          d="m49,26 20,24m0-24-20,24"
+        ></path>
+      </svg>
+    </div>
+
+  <div class="mute-speaker">
+    <svg viewBox="0 0 75 75" version="1.0" xmlns="http://www.w3.org/2000/svg">
+        <path
+          style="stroke:#000000;stroke-width:5;stroke-linejoin:round;fill:#000000;"
+          d="M39.389,13.769 L22.235,28.606 L6,28.606 L6,47.699 L21.989,47.699 L39.389,62.75 L39.389,13.769z"
+        ></path>
+        <path
+          style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:round"
+          d="M48,27.6a19.5,19.5 0 0 1 0,21.4M55.1,20.5a30,30 0 0 1 0,35.6M61.6,14a38.8,38.8 0 0 1 0,48.6"
+        ></path>
+      </svg>
+    </div>
+</label>
+</div>
+
+    <button class="setting-btn" onclick="toggleSettings()">
         <span class="bar bar1"></span>
         <span class="bar bar2"></span>
         <span class="bar bar1"></span>
       </button>
+    
+     
+      <div class="settings-popup" id="settingsPopup">
+        <h3>Wähle deinen Modus:</h3>
+        <div class="jersey-options">
+          <img src="../BILDER/ROTBLAU.png" alt="Rot-Blau Trikot" onclick="setTheme('light')" title="Light Mode (Weiß)">
+          <img src="../BILDER/SchwarzTrikot.png" alt="Schwarz Trikot" onclick="setTheme('dark')" title="Dark Mode (Schwarz)">
+          <button id="closeMode" onclick="closeMode()">Schließen</button>
+        </div>
+      </div>
+      
         <a href="../index.html">
         <img id="pfeil" src="../BILDER/PfeilL.png" alt=""></a>
         <h1>Willkommen zum Fußballspiel</h1>

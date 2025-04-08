@@ -1,3 +1,11 @@
+let audioMu = new Audio('../Audio/Musi.mp3')
+let audioBoo = new Audio('../Audio/Boo.mp3')
+let audioCheer = new Audio('../Audio/APPLAUS.mp3')
+let audioGame = new Audio('../Audio/Gamemusic.mp3')
+
+
+
+
 
 function toggleGloveSelection() {
     const gloveContainer = document.getElementById('gloveContainer');
@@ -65,6 +73,8 @@ function showInfo() {
 
       }
 
+     
+
       function selectGlove(element) {
         document.querySelectorAll('.glove-selection img').forEach(img => img.classList.remove('selected'));
         element.classList.add('selected');
@@ -117,9 +127,11 @@ function startTimer() {
 
 function endGame() {
   clearInterval(timerInterval);
-  
-
-}
+  audioBoo.pause();
+  audioCheer.pause();
+  audioMu.play();
+  audioGame.pause();
+ }
 endGame();
 function resetButton() {
   location.reload();
@@ -151,10 +163,11 @@ function spawnBall() {
       ballRect.left < torbox.right &&
       ballRect.right > torbox.left
     ) {
-      gameTime = Math.max(0, gameTime - 3);
+      gameTime = Math.max(0, gameTime - 10);
       updateTimerDisplay();
       ball.remove();
-      clearInterval(interval);
+      audioBoo.play();
+     clearInterval(interval);
     }
 
     else if (
@@ -165,6 +178,7 @@ function spawnBall() {
     ) {
       gameTime += 5;
       updateTimerDisplay();
+      audioCheer.play();
       score++;
       updateCounterDisplay();
       ball.remove();
@@ -194,7 +208,8 @@ function updateCounterDisplay() {
 
 function startGame() {
   let name = document.getElementById("playerName");
-
+  audioMu.pause();
+  audioGame.play();
   if (!name.value.trim()) {
     console.log("Enter a name");
     setTimeout(() => {
@@ -208,3 +223,58 @@ function startGame() {
 
   setInterval(spawnBall, 2000); 
 }
+
+function toggleSettings() {
+  document.getElementById('settingsPopup').classList.toggle('active');
+}
+
+function setTheme(mode) {
+  if (mode === 'dark') {
+    document.body.classList.remove('light-mode');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.body.classList.add('light-mode');
+    localStorage.setItem('theme', 'light');
+  }
+
+  
+  document.getElementById('settingsPopup').classList.remove('active');
+}
+
+
+window.onload = function () {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+  }
+};
+function toggleSettings(){
+  document.getElementById("playerName").style.display = "none";
+  document.getElementById("Info").style.display = "none";
+  document.getElementById("Startbutton").style.display = "none";
+  document.getElementById("glovSe").style.display = "none";
+  document.getElementById("gloveContainer").style.display = "none";
+  document.getElementById("selectedGloveContainer").style.display = "none";
+  document.getElementById("settingsPopup").style.display = "block";
+
+
+  
+}
+function closeMode(){
+  document.getElementById("playerName").style.display = "block";
+  document.getElementById("Info").style.display = "block";
+  document.getElementById("Startbutton").style.display = "block";
+  document.getElementById("glovSe").style.display = "block";
+  document.getElementById("settingsPopup").style.display = "blovk";
+
+
+}
+function audioMute() {
+  audioMu.muted = true;
+  audioBoo.muted = true;
+  audioCheer.muted = true;
+  audioGame.muted = true;
+}
+
+
+audioMu.play();
