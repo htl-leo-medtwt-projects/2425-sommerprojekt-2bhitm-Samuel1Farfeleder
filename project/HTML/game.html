@@ -12,7 +12,7 @@
 <div id="StartScreen">
     <!-- From Uiverse.io by ElsayedShamsEldeen --> 
 <div id="mute" onclick="audioMute()"><input id="checkboxInput" type="checkbox" />
-<label class="toggleSwitch" for="checkboxInput">
+<label class="toggleSwitch" for="checkboxInput" >
   <div class="speaker">
     <svg stroke-width="5" stroke="#000000" viewBox="0 0 75 75" version="1.0">
         <path
@@ -48,27 +48,28 @@
         <span class="bar bar2"></span>
         <span class="bar bar1"></span>
       </button>
-    
+    <img id="load" src="../BILDER/Load.gif" alt="">
      
       <div class="settings-popup" id="settingsPopup">
         <h3>Wähle deinen Modus:</h3>
         <div class="jersey-options">
           <img src="../BILDER/ROTBLAU.png" alt="Rot-Blau Trikot" onclick="setTheme('light')" title="Light Mode (Weiß)">
-          <img src="../BILDER/SchwarzTrikot.png" alt="Schwarz Trikot" onclick="setTheme('dark')" title="Dark Mode (Schwarz)">
+          <img id="SchwarzTrikot" src="../BILDER/SchwarzTrikot.png" alt="Schwarz Trikot" onclick="setTheme('dark')" title="Dark Mode (Schwarz)">
           <button id="closeMode" onclick="closeMode()">Schließen</button>
         </div>
       </div>
       
         <a href="../index.html">
         <img id="pfeil" src="../BILDER/PfeilL.png" alt=""></a>
-        <h1>Willkommen zum Fußballspiel</h1>
-        <input type="text" placeholder="Dein Name" id="playerName">
+  <input type="text" placeholder="Dein Name" id="playerName">
         <br><br>
         <button id="Info" onclick="showInfo()">Info</button>
         <div id="infoText"  style="display:none;">
             <h2>Spielanleitung</h2>
             <p>Sammle so viele Fußbälle wie möglich!</p>
             <p>Jeder gesammelte Fußball gibt dir +5 Sekunden extra Zeit.</p>
+            <p>Jeder nicht gehaltene Fußball gibt dir -10 Sekunden  Zeit.</p>
+
             <p>Für das beste Spielerlebnis spiele im Vollbildmodus (F11 oder Fn + F11).</p>
         <button  onclick="closeInfo()">Schließen</button>
     </div>
@@ -85,8 +86,8 @@
         <button id="Startbutton" onclick="startGame()">Start</button>
 
         <div id="selectedGloveContainer" style="display: none">
-            <h3>Deine Handschuhe:</h3>
-            <img id="selectedGlove"   src="../BILDER/Handschuh1.png" alt="Handschuh">
+            <h3 id="hani" style="display: none">Deine Handschuhe:</h3>
+            <img id="selectedGlove"   src="../BILDER/Handschuh1.png" alt="Handschuh" style="display: none" >
         </div>
 
        
@@ -124,6 +125,7 @@
     </div>
     </div>
     </div>
+    
  
 
 </body>

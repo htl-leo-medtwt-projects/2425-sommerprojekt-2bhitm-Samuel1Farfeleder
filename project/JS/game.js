@@ -57,6 +57,10 @@ function showInfo() {
         document.getElementById("glovSe").style.display = "none";
         document.getElementById("gloveContainer").style.display = "block";
         document.getElementById("selectedGloveContainer").style.display = "none";
+        document.getElementById("load").style.display = "none";
+        document.getElementById("hani").style.display = "none";
+        document.getElementById("selectedGlove").style.display = "none";
+
 
 
 
@@ -68,6 +72,13 @@ function showInfo() {
         document.getElementById("glovSe").style.display = "block";
         document.getElementById("gloveContainer").style.display = "none";
         document.getElementById("selectedGloveContainer").style.display = "block";
+        document.getElementById("hani").style.display = "block";
+        document.getElementById("selectedGlove").style.display = "block";
+        document.getElementById("load").style.display = "none";
+
+
+
+
 
 
 
@@ -208,8 +219,6 @@ function updateCounterDisplay() {
 
 function startGame() {
   let name = document.getElementById("playerName");
-  audioMu.pause();
-  audioGame.play();
   if (!name.value.trim()) {
     console.log("Enter a name");
     setTimeout(() => {
@@ -217,24 +226,31 @@ function startGame() {
     }, 3000);
     return;
   }
+  audioMu.pause();
+  audioGame.play();
 
   document.getElementById("StartScreen").style.display = "none";
   startTimer();
 
   setInterval(spawnBall, 2000); 
 }
+let root = document.querySelector(':root');
 
-function toggleSettings() {
-  document.getElementById('settingsPopup').classList.toggle('active');
-}
+
+
 
 function setTheme(mode) {
   if (mode === 'dark') {
-    document.body.classList.remove('light-mode');
     localStorage.setItem('theme', 'dark');
+    root.style.setProperty('--color-back', 'rgb(0, 0, 0)');
+    root.style.setProperty('--color-bu', 'rgb(255, 238, 0)');
+
+
   } else {
-    document.body.classList.add('light-mode');
     localStorage.setItem('theme', 'light');
+    root.style.setProperty('--color-back', 'linear-gradient(to right, rgb(10, 53, 122) 0%,  rgb(83, 5, 5) 50%,rgb(10, 53, 122) 100%   ');
+    root.style.setProperty('--color-bu', ' rgb(251, 255, 0) ');
+
   }
 
   
@@ -265,16 +281,23 @@ function closeMode(){
   document.getElementById("Info").style.display = "block";
   document.getElementById("Startbutton").style.display = "block";
   document.getElementById("glovSe").style.display = "block";
-  document.getElementById("settingsPopup").style.display = "blovk";
+  document.getElementById("settingsPopup").style.display = "none";
+
 
 
 }
 function audioMute() {
-  audioMu.muted = true;
+ 
+
+    audioMu.muted = true;
   audioBoo.muted = true;
   audioCheer.muted = true;
   audioGame.muted = true;
+  
 }
+
+
+
 
 
 audioMu.play();
