@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;700&family=Bebas+Neue&display=swap');
+
+:root {
+  --blau: #004D98;
+  --rot: #A50044;
+  --gold: #EDBB00;
+  --weiß: #ffffff;
+  --dunkelblau: #0d1b2a;
+  --schwarz-transparent: rgba(0, 0, 0, 0.6);
+}
+
+
+body {
+    text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--blau), var(--rot));
+  font-family: 'Oswald', sans-serif;
+  color: var(--weiß);
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 15vw;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.04);
+  z-index: 0;
+  pointer-events: none;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+#search {
+  padding: 0.6rem 1rem;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+#filters {
+  margin-top: 1rem;
+}
+
+#filters button {
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  margin: 0.3rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#filters button:hover,
+#filters button.active {
+  background: var(--gold);
+  color: var(--blau);
+  font-weight: bold;
+}
+
+#player-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.player-card {
+  background: #1a1a2e;
+  border: 2px solid var(--gold);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  max-width: 220px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+.player-card:hover {
+  transform: scale(1.05);
+}
+
+.player-card img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.player-card p {
+  font-size: 1.1rem;
+  margin: 0.5rem 1rem;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.hover-info {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  font-size: 0.95rem;
+  transition: opacity 0.3s;
+  color: var(--weiß);
+}
+
+.hover-info p {
+  margin: 0.2rem 0;
+}
+
+.hover-info .like-btn {
+  text-align: right;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: var(--gold);
+}
+
+.highlight {
+  color: var(--gold);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.player-info-box {
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: var(--schwarz-transparent);
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  color: var(--weiß);
+}
+
+#player-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 27, 42, 0.95);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+}
+
+#player-modal.active {
+  display: flex;
+}
+
+#profile-details {
+  max-width: 800px;
+  background: #1e1e2f;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  position: relative;
+  border: 2px solid var(--gold);
+}
+
+#profile-details img {
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+#profile-details h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--gold);
+}
+
+#profile-details .highlight {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  color: var(--weiß);
+}
+
+
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--weiß);
+}
+
+@media screen and (max-width: 1000px) {
+  #player-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #player-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  .player-card {
+    font-size: 0.9rem;
+  }
+
+  
+
+  #search {
+    width: 90%;
+  }
+}
