@@ -332,7 +332,7 @@ const kader = {
       if (player.position === "Torwart") {
         extraStats = `
           <p>Zu Null<br> ${player.zunull}</p>
-          <p>Gehaltene Bälle<br>${player.gehalten}</p>
+          <p>Gehalten<br>${player.gehalten}</p>
           <p>Spiele<br>${player.spiele}</p>
         `;
       } else {
@@ -360,38 +360,64 @@ const kader = {
     }
   
     function openModal(player) {
+      const isLiked = localStorage.getItem(`liked_${player.name}`) === "true";
+      const checkedAttr = isLiked ? "checked" : "";
+
       modal.classList.add("active");
   
       let extraStats = "";
   
       if (player.position === "Torwart") {
         extraStats = `
-          <p>Spiele: ${player.spiele}</p>
-          <p>Zu Null: ${player.zunull}</p>
-          <p>Gehaltene Bälle: ${player.gehalten}</p>
+          <h3>Spiele <br>${player.spiele}</h3>
+          <h5>Zu Null<br>${player.zunull}</h5>
+          <h6>Gehaltene Bälle<br> ${player.gehalten}</h6>
         `;
       } else {
         extraStats = `
-          <p>Spiele: ${player.spiele}</p>
-          <p>Tore: ${player.tore}</p>
-          <p>Vorlagen: ${player.vorlagen}</p>
+          <h3>Spiele <br> ${player.spiele}</h3>
+          <h5>Tore<br> ${player.tore}</h5>
+          <h6>Vorlagen<br> ${player.vorlagen}</h6>
         `;
       }
+    
   
       profileDetails.innerHTML = `
               <h1 id = "Nameback">${player.name}</h1>
 
         <img src="${player.bild}" alt="${player.name}">
         <h2>${player.name}</h2>
-        <p>Alter: ${player.alter}</p>
-        <p>Position: ${player.position}</p>
-        <p>Wert: <span class="highlight">${player.wert}</span></p>
-        ${extraStats}
-        <p id = "blackbox">pp</p>
+        <h4>Position: ${player.position}</h4>
+        <h13 class="highlight">Wert: <span >${player.wert}</span></h13>
+        ${extraStats}<div class="heart-container" title="Like">
+  <input type="checkbox" class="checkbox" id="likeCheckbox" ${checkedAttr}>
+  <div class="svg-container">
+    <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3a6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z"></path>
+    </svg>
+    <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3a6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z"></path>
+    </svg>
+    <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="10,10 20,20"></polygon>
+      <polygon points="10,50 20,50"></polygon>
+      <polygon points="20,80 30,70"></polygon>
+      <polygon points="90,10 80,20"></polygon>
+      <polygon points="90,50 80,50"></polygon>
+      <polygon points="80,80 70,70"></polygon>
+    </svg>
+  </div>
+</div>
+       
+        <h7 id = "blackbox">pp</h7>
 
       `;
+      document.getElementById("likeCheckbox").addEventListener("change", (e) => {
+        localStorage.setItem(`liked_${player.name}`, e.target.checked);
+      });
+      
     }
-  
+    
     closeModal.addEventListener("click", () => {
       modal.classList.remove("active");
     });
@@ -425,4 +451,32 @@ const kader = {
       renderPlayers(filtered);
     });
   });
+
+
+
+  const themeToggle = document.getElementById('themeToggle');
+
+
+  function applyTheme(mode) {
+    if (mode === 'dark') {
+      document.body.classList.add('dark');
+      themeToggle.checked = true;
+    } else {
+      document.body.classList.remove('dark');
+      themeToggle.checked = false;
+    }
+    localStorage.setItem('theme', mode);
+  }
+
+  themeToggle.addEventListener('change', () => {
+    const mode = themeToggle.checked ? 'dark' : 'light';
+    applyTheme(mode);
+  });
+
+ 
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+  });
+  
   
