@@ -10,7 +10,7 @@ const kader = {
         "wert": "15 MIO",
         "zunull": 174,
         "gehalten": 983,
-        "bild":"https://www.fcbarcelona.com/photo-resources/2024/10/13/04c3b761-ccbd-498f-b988-b67ed1693906/01-Ter_Stegen-M.png?width=300&height=354"
+        "bild":"https://www.fcbarcelona.com/photo-resources/2024/10/13/04c3b761-ccbd-498f-b988-b67ed1693906/01-Ter_Stegen-M.png?width=670&height=790"
       },
       {
         "name": "Iñaki Peña",
@@ -58,7 +58,7 @@ const kader = {
         "wert": "60 MIO",
         "tore": 3,
         "vorlagen": 15,
-        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/e3784cf8-9f03-45e2-ab44-007f2adadf32/03-Balde-M.png?width=300&height=354"
+        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/e3784cf8-9f03-45e2-ab44-007f2adadf32/03-Balde-M.png?width=670&height=790"
       },
       {
         "name": "Ronald Araujo",
@@ -70,7 +70,7 @@ const kader = {
         "wert": "50 MIO",
         "tore": 10,
         "vorlagen": 7,
-        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/5352ecab-dc7a-4d20-a047-67af419dd96b/04-Araujo-M.png?width=300&height=354"
+        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/5352ecab-dc7a-4d20-a047-67af419dd96b/04-Araujo-M.png?width=670&height=790"
       },
       {
         "name": "Iñigo Martínez",
@@ -82,7 +82,7 @@ const kader = {
         "wert": "5 MIO",
         "tore": 3,
         "vorlagen": 4,
-        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/3129af5f-0ec1-4474-988c-1415092eb74f/05-Martinez-M.png?width=300&height=354"
+        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/3129af5f-0ec1-4474-988c-1415092eb74f/05-Martinez-M.png?width=670&height=790"
       },
       {
         "name": "Andreas Christensen",
@@ -94,7 +94,7 @@ const kader = {
         "wert": "5 MIO",
         "tore": 4,
         "vorlagen": 3,
-        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/0969d283-c3f8-471a-8638-9a37124ea1a0/15-Christensen-M.png?width=300&height=354"
+        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/0969d283-c3f8-471a-8638-9a37124ea1a0/15-Christensen-M.png?width=670&height=790"
       },
       {
         "name": "Jules Kounde",
@@ -106,7 +106,7 @@ const kader = {
         "wert": "60 MIO",
         "tore": 6,
         "vorlagen": 18,
-        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/9f7d8d15-0244-4def-a931-8eb563a598a1/23-Kounde-M.png?width=300&height=354"
+        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/9f7d8d15-0244-4def-a931-8eb563a598a1/23-Kounde-M.png?width=670&height=790"
       },
       {
         "name": "Eric Garcia",
@@ -118,7 +118,7 @@ const kader = {
         "wert": "60 MIO",
         "tore": 6,
         "vorlagen": 18,
-        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/60ec100e-ca62-492c-a3c7-7e73956b035b/24-Eric_Garcia-M.png?width=300&height=354"
+        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/60ec100e-ca62-492c-a3c7-7e73956b035b/24-Eric_Garcia-M.png?width=670&height=790"
       },
       {
         "name": "Gerard Martin",
@@ -154,7 +154,7 @@ const kader = {
         "wert": "70 MIO",
         "tore": 10,
         "vorlagen": 14,
-        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/545795b7-4c63-4347-94ab-5f2a49b1eddd/06-Gavi-M.png?width=300&height=354"
+        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/545795b7-4c63-4347-94ab-5f2a49b1eddd/06-Gavi-M.png?width=670&height=790"
 
       },
       {
@@ -167,7 +167,7 @@ const kader = {
         "wert": "30 MIO",
         "tore": 1,
         "vorlagen": 6,
-        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/d9fb4b17-1260-48a5-841d-ffd2a60e57e4/17-Casado-M.png?width=300&height=354"
+        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/d9fb4b17-1260-48a5-841d-ffd2a60e57e4/17-Casado-M.png?width=670&height=790"
       },
       {
         "name": "Marc Bernal",
@@ -191,7 +191,7 @@ const kader = {
         "wert": "120 MIO",
         "tore": 25,
         "vorlagen": 20,
-        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/61d91e06-7435-4823-93e3-2ef7e91b3c8b/08-Pedri-M.png?width=300&height=354"
+        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/61d91e06-7435-4823-93e3-2ef7e91b3c8b/08-Pedri-M.png?width=670&height=790"
       },
       {
         "name": "Pablo Torre",
@@ -203,7 +203,7 @@ const kader = {
         "wert": "7.5 MIO",
         "tore": 5,
         "vorlagen": 4,
-        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/0b7225dc-8ec1-4957-bb92-3ebd72f00dd7/14-Pablo_Torre-M.png?width=300&height=354"
+        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/0b7225dc-8ec1-4957-bb92-3ebd72f00dd7/14-Pablo_Torre-M.png?width=670&height=790"
       },
       {
         "name": "Fermin Lopez",
@@ -215,7 +215,7 @@ const kader = {
         "wert": "50 MIO",
         "tore": 16,
         "vorlagen": 8,
-        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/bc22e993-3083-4ef5-aa77-217951756cca/16-Fermin-M.png?width=300&height=354"
+        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/bc22e993-3083-4ef5-aa77-217951756cca/16-Fermin-M.png?width=670&height=790"
       },
       {
         "name": "Dani Olmo",
@@ -227,7 +227,7 @@ const kader = {
         "wert": "60 MIO",
         "tore": 8,
         "vorlagen": 5,
-        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/6df53816-c907-4ecc-bd0a-c2e8e5a281c2/20-Olmo-M.png?width=300&height=354"
+        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/6df53816-c907-4ecc-bd0a-c2e8e5a281c2/20-Olmo-M.png?width=670&height=790"
       },
       {
         "name": "Frenkie de Jong",
@@ -239,7 +239,7 @@ const kader = {
         "wert": "45 MIO",
         "tore": 19,
         "vorlagen": 21,
-        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/1f6c10a5-07cd-47b3-929b-e29ccabe18d7/21-De_Jong-M.png?width=300&height=354"
+        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/1f6c10a5-07cd-47b3-929b-e29ccabe18d7/21-De_Jong-M.png?width=670&height=790"
       },
       {
         "name": "Ferran Torres",
@@ -251,7 +251,7 @@ const kader = {
         "wert": "28 MIO",
         "tore": 41,
         "vorlagen": 16,
-        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/1edefda1-8229-4232-ace9-2f35bf4d3000/07-Ferran_Torres-M.png?width=300&height=354"
+        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/1edefda1-8229-4232-ace9-2f35bf4d3000/07-Ferran_Torres-M.png?width=670&height=790"
       },
       {
         "name": "Robert Lewandowski",
@@ -263,7 +263,7 @@ const kader = {
         "wert": "15 MIO",
         "tore": 99,
         "vorlagen": 20,
-        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/894e4e5e-b6d0-434e-8610-890e0971a7b2/09-Lewandowski-M.png?width=300&height=354"
+        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/894e4e5e-b6d0-434e-8610-890e0971a7b2/09-Lewandowski-M.png?width=670&height=790"
       },
       {
         "name": "Raphinha",
@@ -275,7 +275,7 @@ const kader = {
         "wert": "80 MIO",
         "tore": 48,
         "vorlagen": 43,
-        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/266dc5af-16b0-4290-99c5-03d73a48df11/11-Raphinha-M.png?width=300&height=354"
+        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/266dc5af-16b0-4290-99c5-03d73a48df11/11-Raphinha-M.png?width=670&height=790"
       },
       {
         "name": "Pau Victor",
@@ -287,7 +287,7 @@ const kader = {
         "wert": "5 MIO",
         "tore": 2,
         "vorlagen": 1,
-        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/64d7a058-2043-4a39-a5b6-2b7525541fd5/18-Pau_Victor-M.png?width=300&height=354"
+        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/64d7a058-2043-4a39-a5b6-2b7525541fd5/18-Pau_Victor-M.png?width=670&height=790"
       },
       {
         "name": "Ansu Fati",
@@ -299,7 +299,7 @@ const kader = {
         "wert": "5 MIO",
         "tore": 29,
         "vorlagen": 6,
-        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/64d7a058-2043-4a39-a5b6-2b7525541fd5/18-Pau_Victor-M.png?width=300&height=354"
+        "bild": "https://www.fcbarcelona.com/photo-resources/2024/10/13/64d7a058-2043-4a39-a5b6-2b7525541fd5/18-Pau_Victor-M.png?width=670&height=790"
       },
       {
         "name": "Lamine Yamal",
@@ -311,7 +311,7 @@ const kader = {
         "wert": "180 MIO",
         "tore": 21,
         "vorlagen": 24,
-        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/d942d5c0-5ada-423c-baf1-4d2ba5ebe3bb/19-Lamine-M.png?width=300&height=354"
+        "bild" : "https://www.fcbarcelona.com/photo-resources/2024/10/13/d942d5c0-5ada-423c-baf1-4d2ba5ebe3bb/19-Lamine-M.png?width=670&height=790"
       }
     ]
   };
@@ -329,17 +329,31 @@ const kader = {
     function createCard(player) {
       const card = document.createElement("div");
       card.classList.add("player-card");
+      if (player.position === "Torwart") {
+        extraStats = `
+          <p>Zu Null<br> ${player.zunull}</p>
+          <p>Gehaltene Bälle<br>${player.gehalten}</p>
+          <p>Spiele<br>${player.spiele}</p>
+        `;
+      } else {
+        extraStats = `
+         <p>Tore <br>${player.tore}</p>
+      <p>Vorlagen<br> ${player.vorlagen}</p>
+      <p> Spiele<br> ${player.spiele}</p>
+        `;
+      }
   
-      card.innerHTML = `
+      card.innerHTML = ` 
+      <div class="hover-info">
         <img src="${player.bild}" alt="${player.name}">
-        <p class="highlight">${player.name}</p>
-        <div class="hover-info">
-          <p>Position: ${player.position}</p>
-          <p>Nummer: ${player.nr}</p>
-          <p>Nationalität: ${player.natio}</p>
+        <h2 class="highlight">${player.name}</h2>
+          <h4 class="highlight">${player.position}</h4>
+          <hr>
+          ${extraStats}
         </div>
-        <div class="player-info-box">${player.wert}</div>
+        
       `;
+     
   
       card.addEventListener("click", () => openModal(player));
       return card;
@@ -365,12 +379,15 @@ const kader = {
       }
   
       profileDetails.innerHTML = `
+              <h1 id = "Nameback">${player.name}</h1>
+
         <img src="${player.bild}" alt="${player.name}">
         <h2>${player.name}</h2>
         <p>Alter: ${player.alter}</p>
         <p>Position: ${player.position}</p>
         <p>Wert: <span class="highlight">${player.wert}</span></p>
         ${extraStats}
+        <p id = "blackbox">pp</p>
 
       `;
     }
