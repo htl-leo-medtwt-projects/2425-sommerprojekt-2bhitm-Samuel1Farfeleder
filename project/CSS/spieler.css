@@ -335,7 +335,7 @@ h4.highlight  {
   text-align: center;
   position: absolute;
   z-index: 2;
-  bottom: 25%;
+  bottom: 10%;
   left: 5%;
   font-size: 2rem;
 }
@@ -347,7 +347,7 @@ h4.highlight  {
   text-align: center;
   position: absolute;
   z-index: 2;
-  bottom: 25%;
+  bottom: 10%;
   left: 40%;
   font-size: 2rem;
 }
