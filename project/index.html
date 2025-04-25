@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/style.css">
+    <script src="./JS/script.js" defer></script>
 </head>
 <body>
-    <div id="nav">
-    <div id="nav-bar">
-        <a href="./index.html">Homepage</a>
-        <a href="./HTML/spieler.html">Player</a>
-        <a href="./HTML/historie.html">History</a>
-        <a href="./HTML/game.html">Game</a>
-    </div></div>
+
+
+    <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Start</a></li>
+          <li><a href="./HTML/game.html">Spiele</a></li>
+          <li><a href="./HTML/spieler.html" >Spieler</a></li>
+          <li><a href="./HTML/historie.html">Historie</a></li>
+        </ul>
+        <div class="wrapper">
+          <input type="checkbox" name="checkbox" class="switch" id="themeToggle">
+        </div>
+        </div>
+        
+      </nav>
 </body>
 </html>
