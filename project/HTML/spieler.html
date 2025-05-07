@@ -1,47 +1,47 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spielerkader</title>
-  <link rel="stylesheet" href="../CSS/spieler.css"/>
-  <script src="../JS/spieler.js" defer ></script>
-</head>
-<body>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="../index.html">Start</a></li>
-      <li><a href="game.html">Spiele</a></li>
-      <li><a href="spieler.html" class="active">Spieler</a></li>
-      <li><a href="historie.html">Historie</a></li>
-    </ul>
-    <div class="wrapper">
-      <input type="checkbox" name="checkbox" class="switch" id="themeToggle">
-    </div>
-    </div>
-    
-  </nav>
-  
-    <header>
-     <img id="logo" src="../BILDER/Barca_Logo.png" alt="">
-        <input type="text" id="search" placeholder="Spieler suchen..." />
-        <div id="filters">
-          <button data-pos="All">Alle</button>
-          <button data-pos="Torwart">Torwart</button>
-          <button data-pos="Verteidiger">Verteidiger</button>
-          <button data-pos="Midfielder">Mittelfeld</button>
-          <button data-pos="Forward">Sturm</button>
-        </div>
-      </header>
-    
-      <main>
-        <div id="player-grid"></div>
-      </main>
-    
-      <div id="player-modal" class="hidden">
-        <div class="modal-content" id="profile-details"></div>
-        <span class="close">&times;</span>
+  <!DOCTYPE html>
+  <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Spielerkader</title>
+    <link rel="stylesheet" href="../CSS/spieler.css"/>
+    <script src="../JS/spieler.js" defer ></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="../index.html">Start</a></li>
+        <li><a href="game.html">Spiele</a></li>
+        <li><a href="spieler.html" class="active">Spieler</a></li>
+        <li><a href="historie.html">Historie</a></li>
+      </ul>
+      <div class="wrapper">
+        <input type="checkbox" name="checkbox" class="switch" id="themeToggle">
       </div>
-     
-</body>
-</html>
+      </div> 
+      
+    </nav>
+    
+      <header>
+      <img id="logo" src="../BILDER/Barca_Logo.png" alt="">
+          <input type="text" id="search" placeholder="Spieler suchen..." />
+          <div id="filters">
+            <button data-pos="All">Alle</button>
+            <button data-pos="Torwart">Torwart</button>
+            <button data-pos="Verteidiger">Verteidiger</button>
+            <button data-pos="Midfielder">Mittelfeld</button>
+            <button data-pos="Forward">Sturm</button>
+          </div>
+        </header>
+      
+        <main>
+          <div id="player-grid"></div>
+        </main>
+      
+        <div id="player-modal" class="hidden">
+          <div class="modal-content" id="profile-details"></div>
+          <span class="close">&times;</span>
+        </div>
+      
+  </body>
+  </html>

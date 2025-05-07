@@ -18,18 +18,24 @@
     --blau: #004D98;
   
   }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
   body {
     text-align: center;
-  margin: 0;
-  padding: 0;
-  background: var(--color-back);
-  font-family: Mont;
-  color: var(--weiß);
-  overflow-x: hidden;
-  position: relative;
-  background-size: 100vw;
-  background-repeat: no-repeat;
-}
+    background: var(--color-back);
+    font-family: Mont;
+    color: var(--weiß);
+    overflow-x: hidden;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optional für Parallax-Effekt */
+  }
+  
 .navbar {
     background: var(--color-nav);
     padding: 1rem 2rem;
@@ -246,3 +252,95 @@
     top: 20%;
     left: 90%;
   }
+  .main-content {
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  .next-game-section {
+    margin-top: 3rem;
+  }
+  
+  .countdown {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--gold);
+  }
+  
+  .team-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+   
+  }
+  
+  .team-logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .player-button-section {
+    margin-top: 10rem;
+  }
+  
+  .player-button {
+    border: #000 solid 1px;
+    background: var(--color-nav);
+    color: gainsboro;
+    padding: 1.4rem 5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .player-button:hover {
+    background-color: var(--color-link);
+    color: white;
+    box-shadow: 0 0 10px var(--color-link);
+  }
+  .random-player-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .random-players {
+    display: flex;
+    flex-direction: row; 
+    gap: 1rem;
+  }
+  
+  .random-players img {
+    width: 250px;
+    height: auto;
+  
+  }
+  
+  .center-block {
+    text-align: center;
+    max-width: 220px;
+  }
+
+  #randomPlayersLeft{
+    position: absolute;
+    left: 0%;
+    top: 20%;
+  }
+  #randomPlayersRight{
+    position: absolute;
+    right: 0%;
+    top: 20%;
+  }
+  h3{
+    font-size: 2rem;
+  }
+  
+  
+  
+  

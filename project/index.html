@@ -8,6 +8,7 @@
     <script src="./JS/script.js" defer></script>
 </head>
 <body>
+  
 
 
     <nav class="navbar">
@@ -21,7 +22,38 @@
           <input type="checkbox" name="checkbox" class="switch" id="themeToggle">
         </div>
         </div>
+        </nav>
+
+        <div class="random-player-wrapper">
+          <div class="random-players left" id="randomPlayersLeft"></div>
         
-      </nav>
+          
+          <div class="random-players right" id="randomPlayersRight"></div>
+        </div>
+        
+      <main class="main-content">
+        <section class="next-game-section">
+          <h2>NEXT GAME IN</h2>
+          <div class="countdown" id="countdown">
+            <span id="days">0</span> : 
+            <span id="hours">0</span> : 
+            <span id="minutes">0</span> : 
+            <span id="seconds">0</span>
+          </div>
+          <div class="team-logos">
+            <img id="homeLogo" src="" alt="Home" class="team-logo">
+            <span style="font-size: 2rem;">vs</span>
+            <img id="awayLogo" src="" alt="Away" class="team-logo">
+          </div>
+        </section>
+      
+        <section class="player-button-section">
+          <h3>YOUR FAVOURITE PLAYERS</h3>
+          <a href="./HTML/spieler.html" class="player-button">Go To Player Side</a>
+        </section>
+      </main>
+     
+      
+      
 </body>
 </html>
