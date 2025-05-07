@@ -41,78 +41,98 @@ const bilder = [
 ];
 
 
-const themeToggle = document.getElementById('themeToggle');
+let themeToggle = document.getElementById('themeToggle');
 
 
-  function applyTheme(mode) {
-    if (mode === 'dark') {
-      document.body.classList.add('dark');
-      themeToggle.checked = true;
-    } else {
-      document.body.classList.remove('dark');
-      themeToggle.checked = false;
-    }
-    localStorage.setItem('theme', mode);
+function applyTheme(mode) {
+  if (mode === 'dark') {
+    document.body.classList.add('dark');
+    themeToggle.checked = true;
+  } else {
+    document.body.classList.remove('dark');
+    themeToggle.checked = false;
+  }
+  localStorage.setItem('theme', mode);
+}
+
+themeToggle.addEventListener('change', () => {
+  const mode = themeToggle.checked ? 'dark' : 'light';
+  applyTheme(mode);
+});
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme);
+});
+
+const game = gameData.nextGame;
+const targetDate = new Date(game.dateTime);
+
+document.getElementById('homeLogo').src = game.homeTeam.logo;
+document.getElementById('awayLogo').src = game.awayTeam.logo;
+
+function updateCountdown() {
+  const now = new Date();
+  const diff = targetDate - now;
+
+  if (diff <= 0) {
+    document.getElementById('countdown').textContent = "GAME STARTED";
+    return;
   }
 
-  themeToggle.addEventListener('change', () => {
-    const mode = themeToggle.checked ? 'dark' : 'light';
-    applyTheme(mode);
-  });
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
 
- 
-  window.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    applyTheme(savedTheme);
-  });
+  document.getElementById('days').textContent = days;
+  document.getElementById('hours').textContent = hours;
+  document.getElementById('minutes').textContent = minutes;
+  document.getElementById('seconds').textContent = seconds;
+}
 
-  const game = gameData.nextGame;
-  const targetDate = new Date(game.dateTime);
-  
-  document.getElementById('homeLogo').src = game.homeTeam.logo;
-  document.getElementById('awayLogo').src = game.awayTeam.logo;
-  
-  function updateCountdown() {
-    const now = new Date();
-    const diff = targetDate - now;
-  
-    if (diff <= 0) {
-      document.getElementById('countdown').textContent = "GAME STARTED";
-      return;
-    }
-  
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-  
-    document.getElementById('days').textContent = days;
-    document.getElementById('hours').textContent = hours;
-    document.getElementById('minutes').textContent = minutes;
-    document.getElementById('seconds').textContent = seconds;
+updateCountdown();
+setInterval(updateCountdown, 1000);
+function getRandomUniqueImages(array, count) {
+  const shuffled = [...array].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
+const selectedImages = getRandomUniqueImages(bilder, 4);
+
+const leftContainer = document.getElementById('randomPlayersLeft');
+const rightContainer = document.getElementById('randomPlayersRight');
+
+selectedImages.forEach((player, index) => {
+  const img = document.createElement('img');
+  img.src = player.bild;
+  img.alt = player.name;
+  if (index < 2) {
+    leftContainer.appendChild(img);
+  } else {
+    rightContainer.appendChild(img);
   }
+});
+
+
+function loadLikedPlayers() {
+  let likedPlayers = JSON.parse(localStorage.getItem('likedPlayer')) || [];
+  const likedPlayersContainer = document.getElementById('liked-players');
+  console.log(likedPlayers);
   
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-  function getRandomUniqueImages(array, count) {
-    const shuffled = [...array].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
+
+  let brick = '';
+
+  for (let i = 0; i < likedPlayers.length; i++) {
+    const player = likedPlayers[i];
+    brick += `<div class="player-card">
+                  <img src="${player.bild}" alt="${player.name}">
+                  <p>${player.name}</p>
+                  <p>${player.position}</p>
+                </div>`;
   }
-  
-  const selectedImages = getRandomUniqueImages(bilder, 4);
-  
-  const leftContainer = document.getElementById('randomPlayersLeft');
-  const rightContainer = document.getElementById('randomPlayersRight');
-  
-  selectedImages.forEach((player, index) => {
-    const img = document.createElement('img');
-    img.src = player.bild;
-    img.alt = player.name;
-    if (index < 2) {
-      leftContainer.appendChild(img);
-    } else {
-      rightContainer.appendChild(img);
-    }
-  });
-  
-  
+  likedPlayersContainer.innerHTML = brick;
+}
+
+loadLikedPlayers();
