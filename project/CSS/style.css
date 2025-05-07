@@ -33,7 +33,7 @@ body {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* optional für Parallax-Effekt */
+  background-attachment: fixed;
 }
 
 .navbar {
@@ -247,25 +247,48 @@ body {
     filter: blur(0px);
   }
 }
-.wrapper{
+.wrapper2{
   position: absolute;
   top: 20%;
   left: 90%;
 }
+
+.wrapper {
+  position: absolute;
+  top: 20%;
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
 .main-content {
-  padding: 3rem 1rem;
+  margin-left: 35%;
+  margin-top: 5%;
+  margin-bottom: -5%;
+  width: 25%;
+  padding: 2rem 3rem;
   text-align: center;
+  background: var(--color-nav); 
+  border-radius: 20px; 
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.main-content:hover {
+  transform: scale(1.05); 
 }
 
 .next-game-section {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .countdown {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
-  color: var(--gold);
+  margin-bottom: 1.5rem;
+  color: var(--gold) ; 
+  text-shadow: 0px 0px 15px rgba(247, 166, 0, 0.6); 
+  animation: countdownEffect 1s ease-in-out infinite;
 }
 
 .team-logos {
@@ -273,14 +296,22 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-top: 1rem;
- 
+  margin-top: 2rem;
 }
 
 .team-logo {
-  width: 150px;
+  width: 100px; 
   height: auto;
+  border-radius: 50%; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.team-logo:hover {
+  transform: scale(1.2); 
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3); 
+}
+
+
 
 .player-button-section {
   margin-top: 10rem;
@@ -388,6 +419,7 @@ h3{
   color: var(--gold);
   width: 100%;
 }
+
 @font-face {
   font-family:Mont ;
   src: url(../FONT/MontserratAlternates-Bold.ttf);

@@ -1,6 +1,6 @@
 const gameData = {
   nextGame: {
-    dateTime: "2025-05-10T18:00:00",
+    dateTime: "2025-05-11T16:15:00",
     homeTeam: {
       name: "FC Barcelona",
       logo: "https://freepngimg.com/thumb/team/141703-logo-fc-barcelona-free-hq-image-thumb.png"
@@ -130,6 +130,9 @@ function loadLikedPlayers() {
                   <img src="${player.bild}" alt="${player.name}">
                   <p>${player.name}</p>
                   <p>${player.position}</p>
+                  <hr>
+                  <p>Spiele:    ${player.spiele}</p>
+
                 </div>`;
   }
   likedPlayersContainer.innerHTML = brick;

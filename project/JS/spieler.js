@@ -420,10 +420,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       `;
     document.getElementById("likeCheckbox").addEventListener("change", (e) => {
-      console.log((JSON.parse(localStorage.getItem(`likedPlayer`)) ?? []).push({ bild: player.bild,name: player.name, position: player.position, liked: e.target.checked }));
+      console.log((JSON.parse(localStorage.getItem(`likedPlayer`)) ?? []).push({ spiele: player.spiele, bild: player.bild,name: player.name, position: player.position, liked: e.target.checked }));
 
       let temp = JSON.parse(localStorage.getItem(`likedPlayer`)) ?? []
-      temp.push({ bild: player.bild, name: player.name, liked: e.target.checked, position: player.position  });
+      temp.push({ spiele: player.spiele, bild: player.bild, name: player.name, liked: e.target.checked, position: player.position  });
       console.log(temp);
 
       localStorage.setItem(`likedPlayer`, JSON.stringify(temp));
