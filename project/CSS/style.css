@@ -9,6 +9,7 @@
   --color-nav: linear-gradient(135deg, #2e0113 0%, #1a000b 50%, #000000 100%);
   --color-link: #5c0026;
   --blau: #5c0026;
+  --balken:  linear-gradient(to bottom, #5c0026,#00000000);
 }
 body.dark{
    --color-back: linear-gradient(180deg, #002b5e, #000000);
@@ -16,6 +17,7 @@ body.dark{
   --color-link: #ffcb05;
   --gold: #EDBB00;
   --blau: #004D98;
+  --balken:  linear-gradient(180deg, #002b5e, #00000000);
 
 }
 html, body {
@@ -262,7 +264,7 @@ body {
 
 .main-content {
   margin-left: 35%;
-  margin-top: 5%;
+  margin-top: 3%;
   margin-bottom: -5%;
   width: 25%;
   padding: 2rem 3rem;
@@ -424,4 +426,15 @@ h3{
   font-family:Mont ;
   src: url(../FONT/MontserratAlternates-Bold.ttf);
 }  
- 
+#hrr {
+  width: 120%;
+  
+  top: 53%;
+  position: absolute;
+  padding: 20px;
+  border: none;
+  height: 1px;
+  background:var(--balken);
+  color: var(--gold);
+  width: 100%;
+}
