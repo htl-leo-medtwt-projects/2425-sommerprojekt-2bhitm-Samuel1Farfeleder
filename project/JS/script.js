@@ -124,8 +124,9 @@ function loadLikedPlayers() {
 
   let brick = '';
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i <4; i++) {
     const player = likedPlayers[i];
+    if(player){
     brick += `<div class="player-card">
                   <img src="${player.bild}" alt="${player.name}">
                   <p>${player.name}</p>
@@ -136,6 +137,7 @@ function loadLikedPlayers() {
                 </div>`;
   }
   likedPlayersContainer.innerHTML = brick;
+}
 }
 
 loadLikedPlayers();
