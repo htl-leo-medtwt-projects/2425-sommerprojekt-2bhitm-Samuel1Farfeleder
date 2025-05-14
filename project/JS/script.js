@@ -74,7 +74,7 @@ function updateCountdown() {
   const diff = targetDate - now;
 
   if (diff <= 0) {
-    document.getElementById('countdown').textContent = "GAME STARTED";
+    document.getElementById('countdown').textContent = "STARTED";
     return;
   }
 
