@@ -827,7 +827,7 @@ input:focus {
   }
 }
 
-/* Tablets (zwischen 600px und 1024px) */
+
 @media (max-width: 1024px) {
   .nav-links {
     flex-wrap: wrap;
