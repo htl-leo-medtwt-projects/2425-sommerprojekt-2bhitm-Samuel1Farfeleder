@@ -773,3 +773,83 @@ input:hover {
 input:focus {
   box-shadow: 0 0 0 3px rgba(165, 0, 68, 0.5);
 }
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .main-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+
+  .wrapper, .wrapper2 {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .team-logo {
+    width: 70px;
+  }
+
+  .player-button {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .random-players {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .random-players img {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  #randomPlayersLeft,
+  #randomPlayersRight {
+    display: none;
+  }
+
+  .countdown {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablets (zwischen 600px und 1024px) */
+@media (max-width: 1024px) {
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .main-content {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .team-logo {
+    width: 80px;
+  }
+
+  .random-players img {
+    width: 180px;
+  }
+
+  #randomPlayersLeft,
+  #randomPlayersRight {
+    display: none;
+  }
+}

@@ -5,8 +5,15 @@
    
 }
 :root{
-  --color-back: #000000;
-  --color-bu:yellow;
+  --rot: #A50044;
+  --weiß: #ffffff;
+  --dunkelblau: #0d1b2a;
+  --schwarz-transparent: rgba(0, 0, 0, 0.6); 
+--gold: #fa0068;
+ --color-back:   linear-gradient(to bottom, #5c0026,#000);
+  --color-nav: linear-gradient(135deg, #2e0113 0%, #1a000b 50%, #000000 100%);
+  --color-link: #5c0026;
+  --blau: #5c0026;
 }
 
 body{
@@ -49,13 +56,13 @@ overflow: hidden;
   }
 
 input {
-  background: yellow;
+  background: var(--color-nav);
     padding: 10px;
     font-size: 18px;
     border-radius: 5px;
     border: none;
     text-align: center;
-    box-shadow: 0 0 15px var(--color-bu);
+    box-shadow: 0 0 15px var(--color-link);
     margin-left: 1%;
 
 }
@@ -69,14 +76,14 @@ input {
 }
 .glove-selection img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 15px var(--color-bu);
+    box-shadow: 0 0 15px var(--color-link);
 }
 .glove-selection img.selected {
-    border-color: var(--color-bu);
-    box-shadow: 0 0 20px var(--color-bu);
+    border-color: var(--color-link);
+    box-shadow: 0 0 20px var(--color-link);
 }
 button {
-    background: var(--color-bu);
+    background: var(--color-link);
     border: none;
     padding: 15px;
     font-size: 20px;
@@ -84,10 +91,10 @@ button {
     cursor: pointer;
     margin-top: 20px;
     transition: 0.3s;
-    box-shadow: 0 0 10px var(--color-bu);
+    box-shadow: 0 0 10px var(--color-link);
 }
 button:hover {
-    box-shadow: 0 0 20px var(--color-bu);
+    box-shadow: 0 0 20px var(--color-link);
     transform: scale(1.1);
 }
 
@@ -217,7 +224,7 @@ bottom: 20%;
   margin-left: 40%;
   color: black;
 width: 100px;
-  background: var(--color-bu);
+  background: var(--color-link);
   border: none;
   padding: 15px;
   font-size: 20px;
@@ -225,10 +232,10 @@ width: 100px;
   cursor: pointer;
   margin-top: 20px;
   transition: 0.3s;
-  box-shadow: 0 0 10px var(--color-bu);
+  box-shadow: 0 0 10px var(--color-link);
 }
 #resetButton:hover {
-  box-shadow: 0 0 20px var(--color-bu);
+  box-shadow: 0 0 20px var(--color-link);
   transform: scale(1.1);
 }
 .container {
@@ -290,7 +297,7 @@ margin-bottom: 10%;
   top: 0;
   left: 2%;
   width: 1%;
-  background: var(--color-bu);
+  background: var(--color-link);
   border: none;
   padding: 15px;
   font-size: 20px;
@@ -298,7 +305,7 @@ margin-bottom: 10%;
   cursor: pointer;
   margin-top: 20px;
   transition: 0.3s;
-  box-shadow: 0 0 10px var(--color-bu);
+  box-shadow: 0 0 10px var(--color-link);
 }
 /* From Uiverse.io by vinodjangid07 */ 
 .setting-btn {
@@ -312,7 +319,7 @@ margin-bottom: 10%;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  background-color: var(--color-bu);
+  background-color: var(--color-link);
   border-radius: 10px;
   cursor: pointer;
   border: none;
@@ -395,7 +402,7 @@ margin-bottom: 10%;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  background-color: var(--color-bu);
+  background-color: var(--color-link);
   border-radius: 10px;
   cursor: pointer;
   border: none;
@@ -480,7 +487,7 @@ body.light-mode .bar::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-bu);
+  background-color: var(--color-link);
   border-radius: 50%;
   cursor: pointer;
   transition-duration: 0.3s;
@@ -549,7 +556,7 @@ display: flex;
 }
 
 #checkboxInput:hover + .toggleSwitch {
-  background-color: var(--color-bu);
+  background-color: var(--color-link);
 }
 #mute{
   position: absolute;

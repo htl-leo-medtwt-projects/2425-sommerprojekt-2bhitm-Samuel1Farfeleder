@@ -31,6 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
  const clubAchievementsData = {
   achievements: [
     {
+      pikto: "../Bilder/Pokale/CL.png",
       title: "Gründung des FC Barcelona (1899)",
       image: "../BILDER/Historie/1899.jpg",
       report: "Der FC Barcelona wurde am 29. November 1899 vom Schweizer Hans Gamper – besser bekannt als Joan Gamper – gegründet. In einer Zeitungsanzeige rief er fußballinteressierte Sportler in Barcelona zusammen, um gemeinsam einen Verein zu gründen. Dieser unscheinbare Aufruf wurde zum Ausgangspunkt einer der größten Erfolgsgeschichten des Weltfußballs. Bereits in den Anfangsjahren war klar, dass Barça nicht einfach nur ein Sportklub sein würde – er wurde zu einem Symbol für die katalanische Identität, für Offenheit, Widerstand und Gemeinschaftssinn. Die Vereinsfarben Blau und Granatrot (Blaugrana) sind heute weltweit bekannt und stehen für Stolz, Geschichte und Emotion. Auch das Motto „Més que un club“ – „Mehr als ein Verein“ – ist kein leeres Versprechen, sondern Ausdruck einer jahrzehntelangen Verbindung zwischen Fußball, Politik und Kultur. Von den bescheidenen Anfängen mit nur 11 Amateurspielern auf einem Sandplatz entwickelte sich der FC Barcelona rasch zu einer sportlichen Institution. Die Gründung 1899 war weit mehr als ein sportlicher Akt – sie war der erste Schritt auf einem Weg, der Barça zu einem der populärsten und einflussreichsten Fußballklubs der Welt machen sollte. Heute ist der Verein mit Millionen von Fans weltweit, legendären Spielern und einer einzigartigen Philosophie ein Inbegriff des modernen Fußballs – und all das nahm seinen Anfang mit einer Zeitungsanzeige und dem Traum eines Schweizers in Katalonien.",
@@ -127,6 +128,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const span = document.createElement('span');
     span.classList.add('year');
     span.textContent = item.title.split('(')[1]?.split(')')[0] || index + 1;
+    
 
     point.appendChild(dot);
     point.appendChild(span);
@@ -156,4 +158,5 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
 

@@ -242,15 +242,26 @@ let root = document.querySelector(':root');
 function setTheme(mode) {
   if (mode === 'dark') {
     localStorage.setItem('theme', 'dark');
-    root.style.setProperty('--color-back', 'rgb(0, 0, 0)');
-    root.style.setProperty('--color-bu', 'rgb(255, 238, 0)');
+   const root = document.documentElement;
+
+root.style.setProperty('--rot', '#A50044');
+root.style.setProperty('--weiß', '#ffffff');
+root.style.setProperty('--dunkelblau', '#0d1b2a');
+root.style.setProperty('--schwarz-transparent', 'rgba(0, 0, 0, 0.6)');
+root.style.setProperty('--gold', '#fa0068');
+root.style.setProperty('--color-back', 'linear-gradient(to bottom, #5c0026, #000)');
+root.style.setProperty('--color-nav', 'linear-gradient(135deg, #2e0113 0%, #1a000b 50%, #000000 100%)');
+root.style.setProperty('--color-link', '#5c0026');
+root.style.setProperty('--blau', '#5c0026');
 
 
   } else {
     localStorage.setItem('theme', 'light');
-    root.style.setProperty('--color-back', 'linear-gradient(to right, rgb(10, 53, 122) 0%,  rgb(83, 5, 5) 50%,rgb(10, 53, 122) 100%   ');
-    root.style.setProperty('--color-bu', ' rgb(251, 255, 0) ');
-
+   root.style.setProperty('--color-back', 'linear-gradient(180deg, #002b5e, #000000)');
+root.style.setProperty('--color-nav', 'linear-gradient(135deg, #002b5e, #004d98, #005bbd, #4a007e)');
+root.style.setProperty('--color-link', '#ffcb05');
+root.style.setProperty('--gold', '#EDBB00');
+root.style.setProperty('--blau', '#004D98');
   }
 
   
