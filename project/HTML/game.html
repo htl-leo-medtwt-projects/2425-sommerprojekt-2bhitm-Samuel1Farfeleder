@@ -69,7 +69,12 @@
             <p>Sammle so viele Fußbälle wie möglich!</p>
             <p>Jeder gesammelte Fußball gibt dir +5 Sekunden extra Zeit.</p>
             <p>Jeder nicht gehaltene Fußball gibt dir -10 Sekunden  Zeit.</p>
-
+            <br>
+            <h2>Modi:</h2>
+            <p>Leicht Handschuh Grün</p>
+            <p>Mittel Handschuh Weiß</p>
+            <p>Schwer Handschuh Rot</p>
+            <br>
             <p>Für das beste Spielerlebnis spiele im Vollbildmodus (F11 oder Fn + F11).</p>
         <button  onclick="closeInfo()">Schließen</button>
     </div>
@@ -77,9 +82,10 @@
         <button id="glovSe" onclick="toggleGloveSelection()">Handschuhe wählen</button>
         <div class="glove-selection" id="gloveContainer" style="display: none;">
             <h3>Wähle deine Handschuhe:</h3>
-            <img src="../BILDER/Handschuh1.png" onclick="selectGlove(this)">
-            <img src="../BILDER/Handschuh2.png" onclick="selectGlove(this)">
-            <img src="../BILDER/Handschuh3.png" onclick="selectGlove(this)">
+            
+            <img src="../BILDER/Handschuh1.png" data-speed="5" onclick="selectGlove(this)">
+            <img src="../BILDER/Handschuh2.png" data-speed="10" onclick="selectGlove(this)">
+            <img src="../BILDER/Handschuh3.png" data-speed="15" onclick="selectGlove(this)">
             <button id="closeSel" onclick="closeSel()">Schließen</button>
         </div>
         <br>
