@@ -147,14 +147,17 @@ window.addEventListener('DOMContentLoaded', () => {
       image.style.opacity = 0;
       textBox.style.opacity = 0;
 
-      setTimeout(() => {
-        image.src = img;
-        textTitle.textContent = title;
-        textContent.textContent = report;
-        textBox.style.display = 'block';
-        image.style.opacity = 1;
-        textBox.style.opacity = 1;
-      }, 300);
+     setTimeout(() => {
+  image.src = img;
+  textTitle.textContent = title;
+  textContent.textContent = report;
+  textBox.style.display = 'block';
+  image.style.opacity = 1;
+  textBox.style.opacity = 1;
+
+  textBox.scrollIntoView({ behavior: 'smooth' });
+}, 300);
+
     });
   });
 });
